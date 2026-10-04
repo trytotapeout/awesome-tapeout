@@ -8,7 +8,7 @@ Submit a pull request that adds one project per line in the matching section:
 
 Requirements for every entry:
 
-- The project is built on or directly for the TapeOut protocol (tapeout.net, $BEM, TapeKit, DeWEB, TapeOut processors on BNB Chain or X Layer).
+- The project is built on or directly for the TapeOut protocol (tapeout.net, $BEM, TapeKit, DeWEB, TapeOut processors on BNB Chain, X Layer or Base).
 - The GitHub repository is public and contains real source code. Repositories that only hold a README, a submission form, an installer script or prebuilt binaries are not accepted.
 - Silicon tapeout projects (Tiny Tapeout, sky130, ASIC flows) belong elsewhere.
 - Mark Genesis Transistor Hackathon entries with 🏁.

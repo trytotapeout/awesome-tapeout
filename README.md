@@ -1,6 +1,6 @@
 # Awesome TapeOut [![Awesome](https://awesome.re/badge.svg)](https://awesome.re)
 
-> A curated list of open-source projects built on [TapeOut](https://tapeout.net/), the on-chain tapeout protocol where NAND / LATCH transistors are wired into circuits and taped out as verifiable on-chain hardware on BNB Chain and X Layer.
+> A curated list of open-source projects built on [TapeOut](https://tapeout.net/), the on-chain tapeout protocol where NAND / LATCH transistors are wired into circuits and taped out as verifiable on-chain hardware on BNB Chain, X Layer and Base.
 
 TapeOut 链上流片协议的开源项目合集。收录标准：GitHub 公开仓库、含真实源代码、与 TapeOut 协议直接相关。
 
