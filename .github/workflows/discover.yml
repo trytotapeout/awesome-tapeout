@@ -1,0 +1,52 @@
+name: Discover new projects
+
+on:
+  schedule:
+    - cron: "37 1 * * *" # 每天 UTC 01:37（北京时间 09:37）
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  issues: write
+
+concurrency:
+  group: discover-projects
+  cancel-in-progress: true
+
+jobs:
+  discover:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    env:
+      GH_TOKEN: ${{ github.token }}
+      GH_REPO: ${{ github.repository }}
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+
+      - name: Search GitHub, the TapeOut Encyclopedia and tapeout.link
+        id: discover
+        run: echo "count=$(node scripts/discover.mjs candidates.md)" >> "$GITHUB_OUTPUT"
+
+      # 只维护一个候选 issue：有候选就新建或更新，没有候选就关闭
+      - name: Update the candidates issue
+        env:
+          COUNT: ${{ steps.discover.outputs.count }}
+          RUN_URL: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}
+        run: |
+          printf '\nRun: %s\n' "$RUN_URL" >> candidates.md
+          number=$(gh issue list --state open --label new-candidates --json number -q '.[0].number')
+          if [ "$COUNT" -gt 0 ]; then
+            if [ -n "$number" ]; then
+              gh issue edit "$number" --title "New project candidates ($COUNT)" --body-file candidates.md
+            else
+              gh label create new-candidates --color 0e8a16 --description "Automated discovery of unlisted projects" --force
+              gh issue create --title "New project candidates ($COUNT)" --label new-candidates --body-file candidates.md
+            fi
+          elif [ -n "$number" ]; then
+            gh issue close "$number" --comment "No unlisted candidates left. Run: $RUN_URL"
+          fi
+          cat candidates.md >> "$GITHUB_STEP_SUMMARY"

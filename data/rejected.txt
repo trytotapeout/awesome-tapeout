@@ -1,0 +1,12 @@
+# Repositories reviewed and not included. One owner/repo per line; text after # is the reason.
+# scripts/discover.mjs skips everything listed here.
+
+xm1319/tapemkt                       # README only, no source code
+a18604585304-hub/remembrance-seal    # docs only, no source code
+agent-evidence-lab/remembrance-seal  # docs only, no source code
+spongemochi/browser                  # installer script only
+tizerluo/deweb-api-webmcp-draft      # spec documents only
+TapeOutProtocol/list                 # fork of the Public Suffix List
+boostbob/TapeBrowser                 # mirror of trytotapeout/TapeBrowser
+boostbob/TapeVault                   # mirror of trytotapeout/TapeVault
+trytotapeout/awesome-tapeout         # this list itself
