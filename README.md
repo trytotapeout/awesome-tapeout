@@ -7,8 +7,9 @@ TapeOut 链上流片协议的开源项目合集。收录标准：GitHub 公开�
 This list is about the **TapeOut protocol** (tapeout.net, $BEM, TapeKit, DeWEB). It is not about silicon tapeout / Tiny Tapeout / ASIC flows.
 
 > **Legend / 图例**
-> 🏁 Entry of the [IGNIX × TapeOut × X Layer Genesis Transistor Hackathon](https://ignix.bot/x_campaign).
-> 🏁 表示该项目是 [Genesis Transistor 黑客松](https://ignix.bot/x_campaign)（IGNIX × TapeOut × X Layer）的参赛作品。
+>
+> - 🏁 Entry of the [IGNIX × TapeOut × X Layer Genesis Transistor Hackathon](https://ignix.bot/x_campaign).
+> - 🏁 表示该项目是 [Genesis Transistor 黑客松](https://ignix.bot/x_campaign)（IGNIX × TapeOut × X Layer）的参赛作品。
 
 ## Contents
 
