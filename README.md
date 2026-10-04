@@ -11,6 +11,11 @@ This list is about the **TapeOut protocol** (tapeout.net, $BEM, TapeKit, DeWEB).
 > - 🏁 Entry of the [IGNIX × TapeOut × X Layer Genesis Transistor Hackathon](https://ignix.bot/x_campaign).
 > - 🏁 表示该项目是 [Genesis Transistor 黑客松](https://ignix.bot/x_campaign)（IGNIX × TapeOut × X Layer）的参赛作品。
 
+> **Disclaimer / 免责声明**
+>
+> - Listing a project here is not an endorsement or recommendation. If you use any project, follow its author's open-source license and use it at your own risk.
+> - 本列表收录的项目不代表任何支持或背书。如需使用，请遵守作者的开源协议，并自行承担风险。
+
 ## Contents
 
 - [Developer Live Sessions](#developer-live-sessions)
