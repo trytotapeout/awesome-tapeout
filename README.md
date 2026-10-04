@@ -6,8 +6,11 @@ TapeOut 链上流片协议的开源项目合集。收录标准：GitHub 公开�
 
 This list is about the **TapeOut protocol** (tapeout.net, $BEM, TapeKit, DeWEB). It is not about silicon tapeout / Tiny Tapeout / ASIC flows.
 
+🏁 = entry of the IGNIX × TapeOut × X Layer Genesis Transistor Hackathon.
+
 ## Contents
 
+- [Developer Live Sessions](#developer-live-sessions)
 - [Official](#official)
 - [DeWEB, Browsers & Gateways](#deweb-browsers--gateways)
 - [Data, Explorers & Monitoring](#data-explorers--monitoring)
@@ -20,6 +23,12 @@ This list is about the **TapeOut protocol** (tapeout.net, $BEM, TapeKit, DeWEB).
 - [Other Resources](#other-resources)
 - [Contributing](#contributing)
 
+## Developer Live Sessions
+
+Replays of TapeOut developer live streams, newest first.
+
+*Coming soon.*
+
 ## Official
 
 - [TapeKit](https://github.com/TapeOutProtocol/TapeKit) - Open-source browser kernel that reads `tape://` sites straight from chain and verifies every byte against on-chain SHA-256.
@@ -27,12 +36,12 @@ This list is about the **TapeOut protocol** (tapeout.net, $BEM, TapeKit, DeWEB).
 
 ## DeWEB, Browsers & Gateways
 
-- [TapeBrowser](https://github.com/trytotapeout/TapeBrowser) - Desktop DeWEB browser for `tape://` sites.
-- [TapeVault](https://github.com/trytotapeout/TapeVault) - On-chain encrypted safe box built on the TapeKit framework.
 - [TapeAPI](https://github.com/BruceLanLan/tapeapi) - Signed AI-call receipts, MCP tools and end-to-end encrypted channels for TapeOut containers (TAP-11).
 - [deweb-mcp-playground](https://github.com/tizerluo/deweb-mcp-playground) - Off-chain playground for an unofficial DeWEB MCP + WebMCP draft.
 - [TapeSign](https://github.com/staveliu/TapeSign) - On-chain contracts, content notarization and dual-signature wallet built on TapeOut containers.
 - [DeSQL Wallet](https://github.com/staveliu/DeSQL_wallet) - Multi-chain wallet experiment built around TapeOut and TapeKit.
+- [TapeBrowser](https://github.com/trytotapeout/TapeBrowser) - Desktop DeWEB browser for `tape://` sites.
+- [TapeVault](https://github.com/trytotapeout/TapeVault) - On-chain encrypted safe box built on the TapeKit framework.
 
 ## Data, Explorers & Monitoring
 
