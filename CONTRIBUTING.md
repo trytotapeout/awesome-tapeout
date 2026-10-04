@@ -14,4 +14,4 @@ Requirements for every entry:
 - Mark Genesis Transistor Hackathon entries with 🏁.
 - Run `node scripts/check.mjs` before opening the PR. It needs an authenticated `gh` CLI.
 
-Projects that lose their source or go private will be removed.
+A GitHub Actions job runs the same check every day and opens a `repo-check` issue when an entry breaks. Projects that lose their source or go private will be removed.
