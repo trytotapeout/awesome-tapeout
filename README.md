@@ -53,6 +53,7 @@ Replays of TapeOut developer live streams, newest first.
 
 ## Data, Explorers & Monitoring
 
+- [TapeOut Integrity Lens](https://github.com/livastic-vm5-primary-20260911/tapeout-xlayer-integrity-lens) - Walletless X Layer factory, market fee and proxy-state explorer with pinned-block JSON/CSV exports.
 - [tap](https://github.com/ddgsdde/tap) - Reproducible on-chain data mirror: leaderboards, raw netlists, NAND-only BLIF exports and market snapshots.
 - [TapeOut Order Monitor](https://github.com/tomqaq1/tapeout-order-monitor) - Windows WinForms terminal for fixed-price orders, mint progress and airdrop claims on BNB Chain.
 - [tapeout-harvester](https://github.com/runesleo/tapeout-harvester) - Fail-closed BEM reward harvester with optional V3 swap and local signing.
@@ -103,8 +104,6 @@ Most entries here come from the [Genesis Transistor Hackathon](https://ignix.bot
 - [Signal Processor](https://github.com/w522mp8vf8-create/signal-processor) - Revenue-sharing processor for an AI trading-signal agent with a buyback-and-burn circuit. 🏁
 - [XBOT Intelligence Processor](https://github.com/Jaffyjee/xbot-intelligence-processor) - Consensus logic for intelligence signals expressed as a TapeOut circuit. 🏁
 - [Nandout](https://github.com/davieslennox0/nandout) - Rules taped out as immutable circuits that consumer contracts obey. 🏁
-- [Fabrica](https://github.com/seekdaseek/fabrica) - Design-to-earn market for smaller equivalent circuits. 🏁
-- [Circuit Commons](https://github.com/yanwenzhe519-ctrl/tapeout-circuit-commons) - Circuit licensing, usage receipts and revenue vaults. 🏁
 - [Circuit City](https://github.com/259906573-ship-it/circuit-city) - A "constitution" circuit governing verifiable energy trades. 🏁
 - [CircuitDesk](https://github.com/diveyreadytodive-star/circuitdesk-ignix-tapeout) - Guided workbench for small Boolean circuits and their truth tables. 🏁
 - [PatchNAND](https://github.com/SERAPH125/patchnand) - Bounty payouts decided by a 60-NAND circuit after human-reviewed fixes. 🏁
