@@ -14,7 +14,7 @@ Requirements for every entry:
 - Mark Genesis Transistor Hackathon entries with 🏁.
 - Run `node scripts/check.mjs` before opening the PR. It needs an authenticated `gh` CLI.
 
-A GitHub Actions job runs the same check every day and opens a `repo-check` issue when an entry breaks. Projects that lose their source or go private will be removed.
+A GitHub Actions job runs the check every day. Scheduled and manual runs on the default branch use `node scripts/check.mjs --prune`: when a repository's metadata returns HTTP 404 twice, its project bullet is removed from `README.md` and the change is committed automatically. Deleted and private repositories both appear as 404 to the workflow token. Successfully removed entries do not fail the job. Network errors, rate limits, missing source files and other validation failures keep the entry and open or update a `repo-check` issue. Push and pull request checks never modify the list.
 
 ## Daily discovery
 

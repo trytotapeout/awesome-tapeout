@@ -103,8 +103,6 @@ Most entries here come from the [Genesis Transistor Hackathon](https://ignix.bot
 - [Signal Processor](https://github.com/w522mp8vf8-create/signal-processor) - Revenue-sharing processor for an AI trading-signal agent with a buyback-and-burn circuit. 🏁
 - [XBOT Intelligence Processor](https://github.com/Jaffyjee/xbot-intelligence-processor) - Consensus logic for intelligence signals expressed as a TapeOut circuit. 🏁
 - [Nandout](https://github.com/davieslennox0/nandout) - Rules taped out as immutable circuits that consumer contracts obey. 🏁
-- [Fabrica](https://github.com/seekdaseek/fabrica) - Design-to-earn market for smaller equivalent circuits. 🏁
-- [Circuit Commons](https://github.com/yanwenzhe519-ctrl/tapeout-circuit-commons) - Circuit licensing, usage receipts and revenue vaults. 🏁
 - [Circuit City](https://github.com/259906573-ship-it/circuit-city) - A "constitution" circuit governing verifiable energy trades. 🏁
 - [CircuitDesk](https://github.com/diveyreadytodive-star/circuitdesk-ignix-tapeout) - Guided workbench for small Boolean circuits and their truth tables. 🏁
 - [PatchNAND](https://github.com/SERAPH125/patchnand) - Bounty payouts decided by a 60-NAND circuit after human-reviewed fixes. 🏁

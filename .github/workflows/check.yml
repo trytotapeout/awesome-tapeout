@@ -6,12 +6,12 @@ on:
   workflow_dispatch:
   push:
     branches: [main]
-    paths: [README.md, scripts/check.mjs, .github/workflows/check.yml]
+    paths: [README.md, scripts/check.mjs, scripts/check.test.mjs, .github/workflows/check.yml]
   pull_request:
-    paths: [README.md, scripts/check.mjs]
+    paths: [README.md, scripts/check.mjs, scripts/check.test.mjs, .github/workflows/check.yml]
 
 permissions:
-  contents: read
+  contents: write
   issues: write
 
 concurrency:
@@ -25,6 +25,7 @@ jobs:
     env:
       GH_TOKEN: ${{ github.token }}
       GH_REPO: ${{ github.repository }}
+      DEFAULT_BRANCH: ${{ github.event.repository.default_branch }}
     steps:
       - uses: actions/checkout@v4
 
@@ -32,12 +33,31 @@ jobs:
         with:
           node-version: 22
 
+      - name: Test repository cleanup safeguards
+        run: node --test scripts/check.test.mjs
+
       - name: Verify listed repositories
         id: check
+        env:
+          AUTO_PRUNE: ${{ (github.event_name == 'schedule' || github.event_name == 'workflow_dispatch') && github.ref_name == github.event.repository.default_branch }}
         run: |
+          args=()
+          if [ "$AUTO_PRUNE" = "true" ]; then args+=(--prune); fi
           set +e
-          node scripts/check.mjs | tee report.txt
+          node scripts/check.mjs "${args[@]}" | tee report.txt
           echo "status=${PIPESTATUS[0]}" >> "$GITHUB_OUTPUT"
+          cat report.txt >> "$GITHUB_STEP_SUMMARY"
+
+      - name: Commit removal of unavailable repositories
+        if: (github.event_name == 'schedule' || github.event_name == 'workflow_dispatch') && github.ref_name == github.event.repository.default_branch
+        run: |
+          if ! git diff --quiet -- README.md; then
+            git config user.name "github-actions[bot]"
+            git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+            git add README.md
+            git commit -m "chore: remove unavailable repositories"
+            git push origin "HEAD:$DEFAULT_BRANCH"
+          fi
 
       # 失败时只维护一个 issue：已有就更新内容，没有才新建；恢复正常后自动关闭
       - name: Open, update or close the tracking issue
